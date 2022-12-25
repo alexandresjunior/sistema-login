@@ -6,7 +6,7 @@ import SignUp from "../pages/SignUp";
 import { useAuth } from "../hooks/useAuth";
 
 const Private = ({ Item }) => {
-    const signed = useAuth();
+    const { signed } = useAuth();
 
     return signed > 0 ? <Item /> : <SignIn />
 }

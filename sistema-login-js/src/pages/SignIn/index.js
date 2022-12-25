@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
 const SignIn = () => {
-    const signIn = useAuth();
+    const { signIn } = useAuth();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");

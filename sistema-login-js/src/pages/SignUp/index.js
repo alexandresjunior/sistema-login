@@ -12,7 +12,7 @@ const SignUp = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const signUp = useAuth();
+    const { signUp } = useAuth();
 
     const handleSignUp = () => {
         if (!email | !emailConf | !senha) {
@@ -30,7 +30,7 @@ const SignUp = () => {
             return;
         }
 
-        alert("Usuário cadatrado com sucesso!");
+        alert("Usuário cadatrado com sucesso! Você será redirecionado para a tela de Login.");
         navigate("/");
     };
 
