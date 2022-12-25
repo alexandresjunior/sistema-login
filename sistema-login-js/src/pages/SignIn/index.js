@@ -47,12 +47,12 @@ const SignIn = () => {
                 />
                 <C.labelError>{error}</C.labelError>
                 <Button text="Entrar" onClick={handleLogin} />
-                <C.LabelSignup>
+                <C.LabelSignUp>
                     Não tem uma conta?
                     <C.Strong>
                         <Link to="/sign-up">&nbsp;Registre-se</Link>
                     </C.Strong>
-                </C.LabelSignup>
+                </C.LabelSignUp>
             </C.Content>
         </C.Container>
     );

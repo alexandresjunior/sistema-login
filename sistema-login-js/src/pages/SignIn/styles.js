@@ -29,7 +29,7 @@ export const Label = styled.label`
   color: #676767;
 `;
 
-export const LabelSignup = styled.label`
+export const LabelSignUp = styled.label`
   font-size: 16px;
   color: #676767;
 `;
