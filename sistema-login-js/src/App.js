@@ -1,9 +1,10 @@
+import RoutesApp from './routes';
 import GlobalStyle from './styles';
 
 const App = () => {
   return (
     <>
-      <p>Hello!</p>
+      <RoutesApp />
       <GlobalStyle />
     </>
   );
