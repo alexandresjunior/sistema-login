@@ -3,10 +3,10 @@ import Input from "../../components/Input";
 import Button from "../../components/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
 
-const Signin = () => {
-    const { signin } = useAuth();
+const SignIn = () => {
+    const signIn = useAuth();
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ const Signin = () => {
             return;
         }
 
-        const res = signin(email, senha);
+        const res = signIn(email, senha);
 
         if (res) {
             setError(res);
@@ -46,11 +46,11 @@ const Signin = () => {
                     onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
                 <C.labelError>{error}</C.labelError>
-                <Button Text="Entrar" onClick={handleLogin} />
+                <Button text="Entrar" onClick={handleLogin} />
                 <C.LabelSignup>
                     Não tem uma conta?
                     <C.Strong>
-                        <Link to="/signup">&nbsp;Registre-se</Link>
+                        <Link to="/sign-up">&nbsp;Registre-se</Link>
                     </C.Strong>
                 </C.LabelSignup>
             </C.Content>
@@ -58,4 +58,4 @@ const Signin = () => {
     );
 };
 
-export default Signin;
+export default SignIn;
